@@ -1,0 +1,355 @@
+{
+  "network": "StudioNet",
+  "source_commit": "dd3b90183dbdaccf53c5b71d7f2d084585d78f5a",
+  "transactions": [
+    {
+      "step": "deploy",
+      "args": [
+        "deploy",
+        "--contract",
+        "contracts/FocalMassLedger.py"
+      ],
+      "nonce": "0x1d3",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "hash": "0x750cfc8e8d019671d50eaf03ddebcd32c4519906aef4e449f59d11e1710bc0bb",
+      "receipt": {
+        "hash": "0x750cfc8e8d019671d50eaf03ddebcd32c4519906aef4e449f59d11e1710bc0bb",
+        "address": "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "committed": true,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    },
+    {
+      "step": "open-pool",
+      "args": [
+        "write",
+        "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+        "open_pool",
+        "--args",
+        "conflict-demo",
+        "The token is red.",
+        "The token is blue.",
+        "The token is green.",
+        "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42:750;0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35:1000"
+      ],
+      "nonce": "0x1d4",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "hash": "0x0349b978df78907038136caf2dccaf7106a341cfcce62226828aad724a7623af",
+      "receipt": {
+        "hash": "0x0349b978df78907038136caf2dccaf7106a341cfcce62226828aad724a7623af",
+        "address": "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "committed": true,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 5,
+        "idle_votes": 0,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    },
+    {
+      "step": "submit-red-or-blue",
+      "args": [
+        "write",
+        "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+        "submit",
+        "--args",
+        "b5b17e47b7cb6e29a65ba2511d5c1e18b8dfc6af08bf4b44875ea7e341540fde",
+        "13e63f0427c275cf4a0605d38381033b29fdc91e77bdc3f93bf8a80c9ff5af0e",
+        "mahdiaqal/focal-mass-ledger/dd3b90183dbdaccf53c5b71d7f2d084585d78f5a/examples/red-or-blue.txt",
+        "94b68fe1d2807b126fa832104bfbc4711f79561e96056d3ddaa0b8c20f9e60c8"
+      ],
+      "nonce": "0x1d5",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "hash": "0x122c5e9b858e6d1196828fa5cc91b821f0a9c9dcdd30af56747f9e7e5ed67b9b",
+      "receipt": {
+        "hash": "0x122c5e9b858e6d1196828fa5cc91b821f0a9c9dcdd30af56747f9e7e5ed67b9b",
+        "address": "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "committed": true,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    },
+    {
+      "step": "submit-green",
+      "args": [
+        "write",
+        "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+        "submit",
+        "--args",
+        "b5b17e47b7cb6e29a65ba2511d5c1e18b8dfc6af08bf4b44875ea7e341540fde",
+        "13e63f0427c275cf4a0605d38381033b29fdc91e77bdc3f93bf8a80c9ff5af0e",
+        "mahdiaqal/focal-mass-ledger/dd3b90183dbdaccf53c5b71d7f2d084585d78f5a/examples/green.txt",
+        "1292b937bbcd1a98db708c7e64a86d49ebacf3e72e19f0d3a0eff3106509cbb2"
+      ],
+      "nonce": "0x36",
+      "signer": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "expected": "SUCCESS",
+      "hash": "0x2633a66b785abcd2c35ad2d59abb5c28dcb5fcbc503d0ce0fa07502dad5c7ed5",
+      "receipt": {
+        "hash": "0x2633a66b785abcd2c35ad2d59abb5c28dcb5fcbc503d0ce0fa07502dad5c7ed5",
+        "address": "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "committed": true,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    },
+    {
+      "step": "withdraw-green",
+      "args": [
+        "write",
+        "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+        "withdraw",
+        "--args",
+        "b5b17e47b7cb6e29a65ba2511d5c1e18b8dfc6af08bf4b44875ea7e341540fde",
+        "13e63f0427c275cf4a0605d38381033b29fdc91e77bdc3f93bf8a80c9ff5af0e"
+      ],
+      "nonce": "0x37",
+      "signer": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "expected": "SUCCESS",
+      "hash": "0xb0ee5720364510bf209cfcba46aeeb959199b588375b0785e4f1ec93de7df75b",
+      "receipt": {
+        "hash": "0xb0ee5720364510bf209cfcba46aeeb959199b588375b0785e4f1ec93de7df75b",
+        "address": "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "committed": true,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    },
+    {
+      "step": "replay-green",
+      "args": [
+        "write",
+        "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+        "submit",
+        "--args",
+        "b5b17e47b7cb6e29a65ba2511d5c1e18b8dfc6af08bf4b44875ea7e341540fde",
+        "13e63f0427c275cf4a0605d38381033b29fdc91e77bdc3f93bf8a80c9ff5af0e",
+        "mahdiaqal/focal-mass-ledger/dd3b90183dbdaccf53c5b71d7f2d084585d78f5a/examples/green.txt",
+        "1292b937bbcd1a98db708c7e64a86d49ebacf3e72e19f0d3a0eff3106509cbb2"
+      ],
+      "nonce": "0x38",
+      "signer": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "expected": "ERROR",
+      "message": "Opinion already used",
+      "hash": "0x5a76a49a953134e88aeedb0a86068544dca48aba3033400b7232744bf9958ba0",
+      "receipt": {
+        "hash": "0x5a76a49a953134e88aeedb0a86068544dca48aba3033400b7232744bf9958ba0",
+        "address": "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+        "status": "FINALIZED",
+        "execution": "ERROR",
+        "consensus": "MAJORITY_AGREE",
+        "expected_error_matched": true,
+        "committed": false,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    }
+  ],
+  "observations": {
+    "red-or-blue": {
+      "report": {
+        "body": "The hypothetical token is red or blue. It is not green.\n",
+        "config_root": "13e63f0427c275cf4a0605d38381033b29fdc91e77bdc3f93bf8a80c9ff5af0e",
+        "focal_mask": 3,
+        "participant": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "policy": "focal-mass-ledger-v1",
+        "pool_id": "b5b17e47b7cb6e29a65ba2511d5c1e18b8dfc6af08bf4b44875ea7e341540fde",
+        "reliability": 750,
+        "root": "19c864e4b4b6735508e876abf42ba9fe68014e2988ab5ea419dfb77f6d3da077",
+        "source": {
+          "sha256": "94b68fe1d2807b126fa832104bfbc4711f79561e96056d3ddaa0b8c20f9e60c8",
+          "url": "https://raw.githubusercontent.com/mahdiaqal/focal-mass-ledger/dd3b90183dbdaccf53c5b71d7f2d084585d78f5a/examples/red-or-blue.txt"
+        },
+        "statement": "The hypothetical token is red or blue. It is not green.",
+        "status": "INFORMATIVE",
+        "vector": [
+          "ALLOWS",
+          "ALLOWS",
+          "EXCLUDES"
+        ]
+      },
+      "withdrawn": false
+    },
+    "green": {
+      "report": {
+        "body": "The hypothetical token is green. It is neither red nor blue.\n",
+        "config_root": "13e63f0427c275cf4a0605d38381033b29fdc91e77bdc3f93bf8a80c9ff5af0e",
+        "focal_mask": 4,
+        "participant": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+        "policy": "focal-mass-ledger-v1",
+        "pool_id": "b5b17e47b7cb6e29a65ba2511d5c1e18b8dfc6af08bf4b44875ea7e341540fde",
+        "reliability": 1000,
+        "root": "7aa93f37ee9d8882280af6e7c1d526ffeeb5a60a2f64c578a1ac6dd8cd45f444",
+        "source": {
+          "sha256": "1292b937bbcd1a98db708c7e64a86d49ebacf3e72e19f0d3a0eff3106509cbb2",
+          "url": "https://raw.githubusercontent.com/mahdiaqal/focal-mass-ledger/dd3b90183dbdaccf53c5b71d7f2d084585d78f5a/examples/green.txt"
+        },
+        "statement": "The hypothetical token is green. It is neither red nor blue.",
+        "status": "INFORMATIVE",
+        "vector": [
+          "EXCLUDES",
+          "EXCLUDES",
+          "ALLOWS"
+        ]
+      },
+      "withdrawn": false
+    },
+    "before": {
+      "active_count": 2,
+      "config_root": "13e63f0427c275cf4a0605d38381033b29fdc91e77bdc3f93bf8a80c9ff5af0e",
+      "denominator": "1000000",
+      "entries": [
+        {
+          "participant": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+          "report_root": "7aa93f37ee9d8882280af6e7c1d526ffeeb5a60a2f64c578a1ac6dd8cd45f444",
+          "status": "ACTIVE"
+        },
+        {
+          "participant": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+          "report_root": "19c864e4b4b6735508e876abf42ba9fe68014e2988ab5ea419dfb77f6d3da077",
+          "status": "ACTIVE"
+        }
+      ],
+      "mass_numerators": [
+        "750000",
+        "0",
+        "0",
+        "0",
+        "250000",
+        "0",
+        "0",
+        "0"
+      ],
+      "policy": "focal-mass-ledger-v1",
+      "pool_id": "b5b17e47b7cb6e29a65ba2511d5c1e18b8dfc6af08bf4b44875ea7e341540fde",
+      "root": "f0ed79b9468d20a80991334007a3b46cc38b723e142cfedbdd1b5abe01c743cf",
+      "status": "CONFLICTED"
+    },
+    "green_bounds": {
+      "belief_numerator": "250000",
+      "config_root": "13e63f0427c275cf4a0605d38381033b29fdc91e77bdc3f93bf8a80c9ff5af0e",
+      "conflict_numerator": "750000",
+      "denominator": "1000000",
+      "plausibility_numerator": "250000",
+      "pool_id": "b5b17e47b7cb6e29a65ba2511d5c1e18b8dfc6af08bf4b44875ea7e341540fde",
+      "snapshot_root": "f0ed79b9468d20a80991334007a3b46cc38b723e142cfedbdd1b5abe01c743cf",
+      "status": "CONFLICTED",
+      "subset_mask": 4,
+      "surviving_numerator": "250000"
+    },
+    "after": {
+      "active_count": 1,
+      "config_root": "13e63f0427c275cf4a0605d38381033b29fdc91e77bdc3f93bf8a80c9ff5af0e",
+      "denominator": "1000",
+      "entries": [
+        {
+          "participant": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+          "report_root": "7aa93f37ee9d8882280af6e7c1d526ffeeb5a60a2f64c578a1ac6dd8cd45f444",
+          "status": "WITHDRAWN"
+        },
+        {
+          "participant": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+          "report_root": "19c864e4b4b6735508e876abf42ba9fe68014e2988ab5ea419dfb77f6d3da077",
+          "status": "ACTIVE"
+        }
+      ],
+      "mass_numerators": [
+        "0",
+        "0",
+        "0",
+        "750",
+        "0",
+        "0",
+        "0",
+        "250"
+      ],
+      "policy": "focal-mass-ledger-v1",
+      "pool_id": "b5b17e47b7cb6e29a65ba2511d5c1e18b8dfc6af08bf4b44875ea7e341540fde",
+      "root": "a298538f14fcda3fcf0d4428f80432aedc36bebf841610ac5d949d708c24bce9",
+      "status": "NONCONFLICTING"
+    },
+    "red_bounds": {
+      "belief_numerator": "0",
+      "config_root": "13e63f0427c275cf4a0605d38381033b29fdc91e77bdc3f93bf8a80c9ff5af0e",
+      "conflict_numerator": "0",
+      "denominator": "1000",
+      "plausibility_numerator": "1000",
+      "pool_id": "b5b17e47b7cb6e29a65ba2511d5c1e18b8dfc6af08bf4b44875ea7e341540fde",
+      "snapshot_root": "a298538f14fcda3fcf0d4428f80432aedc36bebf841610ac5d949d708c24bce9",
+      "status": "NONCONFLICTING",
+      "subset_mask": 1,
+      "surviving_numerator": "1000"
+    },
+    "stale_snapshot_rejected": true
+  },
+  "address": "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+  "source": {
+    "address": "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+    "source_match": true,
+    "sha256": "e39e72b85a449ae7b4d2c8db0d05fe0c153c9113569fe475f18d519f6f526de1"
+  },
+  "pool": {
+    "policy": "focal-mass-ledger-v1",
+    "pool_id": "b5b17e47b7cb6e29a65ba2511d5c1e18b8dfc6af08bf4b44875ea7e341540fde",
+    "contract": "0x8816796688ACD348a42f0507dFf8e582E15458D2",
+    "creator": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+    "nonce": "conflict-demo",
+    "alternatives": [
+      "The token is red.",
+      "The token is blue.",
+      "The token is green."
+    ],
+    "roster": [
+      {
+        "participant": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+        "reliability": 1000
+      },
+      {
+        "participant": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "reliability": 750
+      }
+    ],
+    "config_root": "13e63f0427c275cf4a0605d38381033b29fdc91e77bdc3f93bf8a80c9ff5af0e"
+  },
+  "verified": true
+}
