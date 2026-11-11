@@ -1,0 +1,1 @@
+The hypothetical token is red or blue. It is not green.
